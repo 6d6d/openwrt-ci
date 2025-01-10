@@ -92,9 +92,6 @@ jobs:
     - name: Install Feeds(安装feeds)
       run: |
         cd $OPENWRT_PATH
-        echo "src-git mihomo https://github.com/morytyann/OpenWrt-mihomo.git;main" >> "feeds.conf.default"
-        echo "src-git luci-app-easytier https://github.com/EasyTier/luci-app-easytier.git;main" >> "feeds.conf.default"
-        echo "src-git ddns-go https://github.com/sirpdboy/luci-app-ddns-go.git;main" >> "feeds.conf.default"
         ./scripts/feeds update -a
         ./scripts/feeds install -a
   
